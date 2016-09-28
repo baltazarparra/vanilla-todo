@@ -1,36 +1,47 @@
-/* Reset */
-
-html, body, p, ul, li, h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  padding: 0;
+body {
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 1.4em;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-size: 100%;
-  font-weight: normal;
+.container {
+    width: 992px;
+    margin: 0 auto;
+}
+
+header {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.input {
+    display: inline-block;
+    width: 70%;
+    padding: 8px;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 1.4em;
 }
 
 ul {
-  list-style: none;
+    padding: 20px;
+    text-align: center;
 }
 
-button, input, select, textarea {
-  margin: 0;
+li {
+    list-style: none;
 }
 
-html {
-  box-sizing: border-box;
+button {
+    padding: 8px 14px;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 1.4em;
 }
 
-* {
-  box-sizing: inherit;
+li button {
+    margin: 8px;
+    padding: 0;
 }
 
-*:before, *:after {
-  box-sizing: inherit;
-}
-
-img {
-  height: auto;
-  max-width: 100%;
+input[type=checkbox]:checked + label {
+    text-decoration: line-through;
 }

@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
     <title>TODO List</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -11,10 +12,10 @@
     <div class="container">
         <header>
             <label>
-                Insira seu novo item.
-                <input data-js="inputItem" type="text" name="entrada" placeholder="Comprar pão!">
+                Insert new task
+                <input class="input" data-js="inputItem" type="text" name="entrada" placeholder="That and this">
+                <button data-js="addButton" type="button" name="btn-add">Add</button>
             </label>
-            <button data-js="addButton" type="button" name="btn-add">Adicionar</button>
         </header>
         <main>
             <ul data-js="todoList"></ul>

@@ -18,10 +18,26 @@
 
             createItem: function createItem() {
                 var $item = document.createElement('li');
+                var $check = document.createElement('input');
+                var $label = document.createElement('label');
                 var $inputValue = $inputItem.value;
                 var $inputText = document.createTextNode($inputValue);
-                $item.appendChild($inputText);
+                var $removeButton = document.createElement('button');
+                var $textRemoveButton = document.createTextNode('x');
+                $check.setAttribute('type', 'checkbox');
+                $item.appendChild($check);
+                $item.appendChild($label);
+                $label.appendChild($inputText);
+                $item.setAttribute("data-js", "listItem");
+                $removeButton.appendChild($textRemoveButton);
+                $removeButton.setAttribute("data-js", "removeButton");
                 $todoList.appendChild($item);
+                $item.appendChild($removeButton);
+                $removeButton.addEventListener('click', app.removeItem);
+            },
+
+            removeItem: function removeItem() {
+                $todoList.removeChild(document.querySelector('[data-js="listItem"]'));
             }
         };
     })();
