@@ -13,7 +13,7 @@
             },
 
             initEvents: function initEvents() {
-                $addButton.addEventListener('click', app.createItem);
+                $addButton.addEventListener('click', app.createItem);                
             },
 
             createItem: function createItem() {
@@ -34,6 +34,7 @@
                 $todoList.appendChild($item);
                 $item.appendChild($removeButton);
                 $removeButton.addEventListener('click', app.removeItem);
+                $inputItem.value = '';
             },
 
             removeItem: function removeItem() {
